@@ -111,7 +111,7 @@ int InsertionSort(stud* arr,int n)
     int j=i-1;
     for(;j>=0;j--)
     {
-      if(arr[j].studentrollno>arr[j+1].studentrollno)
+      if(arr[j].studentrollno>temp.studentrollno)
       {
       arr[j+1]=arr[j];
     }
