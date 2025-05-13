@@ -98,9 +98,9 @@ void DijikstraAdjacencyList(int G[MAX][MAX],int n)
         Node* p=adjList[u];
         while(p!=NULL)
         {
-            if(visited[p->vertex]!=1 && G[u][p->vertex]!=INT_MAX && distance[u]!=INT_MAX && distance[p->vertex]>distance[u]+G[u][p->vertex])
+            if(visited[p->vertex]!=1 && p->weight!=INT_MAX && distance[u]!=INT_MAX && distance[p->vertex]>distance[u]+p->weight)
             {
-                   distance[p->vertex]=distance[u]+G[u][p->vertex];
+                   distance[p->vertex]=distance[u]+p->weight;
             }
             p=p->next;
         }
